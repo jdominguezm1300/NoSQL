@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
+    <xs:element name="Cines">  
+        <xs:complexType>  
+            <xs:sequence>  
+                <xs:element name="Actor" minOccurs="1" maxOccurs="unbounded">  
+                    <xs:complexType>  
+                        <xs:simpleContent>  
+                            <xs:extension base="xs:string">  
+                                <xs:attribute name="fechaNacimiento" type="xs:string" use="required"/>  
+                                <xs:attribute name="idActor" type="xs:ID" use="required" />  
+                                <xs:attribute name="idPelicula" type="xs:IDREFS"  />  
+                            </xs:extension>  
+                        </xs:simpleContent>  
+                    </xs:complexType>  
+                    <xs:element name="NombreA" type="xs:string" />  
+                </xs:element>  
+                <xs:element name="Director" minOccurs="1" maxOccurs="unbounded">  
+                    <xs:complexType>  
+                        <xs:simpleContent>  
+                            <xs:extension base="xs:string">  
+                                <xs:attribute name="fechaNacimiento" type="xs:string" />  
+                                <xs:attribute name="idDirector" type="xs:ID" use="required" />  
+                                <xs:attribute name="idPelicula" type="xs:IDREFS" />  
+                            </xs:extension>  
+                        </xs:simpleContent>  
+                    </xs:complexType>  
+                    <xs:element name="nombreD" type="xs:string" />  
+                </xs:element>  
+                <xs:element name="Pelicula" minOccurs="1" maxOccurs="unbounded">  
+                    <xs:complexType>  
+                        <xs:simpleContent>  
+                            <xs:extension base="xs:string">  
+                                <xs:attribute name="idPelicula" type="xs:ID" use="required" />  
+                                <xs:attribute name="estreno" type="xs:string" />  
+                                <xs:attribute name="duracion" type="xs:string" />  
+                            </xs:extension>  
+                        </xs:simpleContent>  
+                    </xs:complexType>  
+                    <xs:element name="Titulo" type="xs:string" use="required" minOccurs="1" maxOccurs="1" />  
+                    <xs:element name="Genero" type="xs:string" minOccurs="0" maxOccurs="unbounded" />  
+                </xs:element>  
+            </xs:sequence>  
+        </xs:complexType>  
+    </xs:element>  
+</xs:schema> 

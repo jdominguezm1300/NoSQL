@@ -1,0 +1,69 @@
+<!DOCTYPE Products SYSTEM "Products.dtd">
+<Products>
+  <Marker name="A">
+    <PC model="100" price="2114">
+      <Speed> 266</Speed>
+      <RAM>1024</RAM>
+      <HardDisk>250</HardDisk> 
+    </PC>
+    
+     <PC model="1002" price="995">
+      <Speed> 2.10</Speed>
+      <RAM>512</RAM>
+      <HardDisk>250</HardDisk> 
+    </PC>
+    
+    <Laptop model="2004" price="1150">
+      <Speed> 2.0</Speed>
+      <RAM>512</RAM>
+      <HardDisk>60</HardDisk>
+      <Screen>13.3</Screen> 
+    </Laptop>
+    
+    <Laptop model="2005" price="2500">
+      <Speed> 2.16</Speed>
+      <RAM>1024</RAM>
+      <HardDisk>120</HardDisk>
+      <Screen>17.0</Screen> 
+    </Laptop>
+  </Marker>
+  
+  <Marker name="E">
+    <PC model="1011" price="959">
+        <Speed> 1.56</Speed>
+        <RAM>2048</RAM>
+        <HardDisk>160</HardDisk> 
+    </PC>
+    
+    <PC model="1012" price="640">
+        <Speed> 280</Speed>
+        <RAM>1024</RAM>
+        <HardDisk>160</HardDisk> 
+    </PC>
+    
+    <Laptop model="2001" price="3675">
+      <Speed> 2.0</Speed>
+      <RAM>2048</RAM>
+      <HardDisk>240</HardDisk>
+      <Screen>20.1</Screen> 
+    </Laptop>
+    
+    <Printer model="3002" price="239">
+      <Color> false</Color>
+      <Type> laser</Type>
+    </Printer>
+  </Marker>
+  
+  <Marker name="H">
+     <Printer model="3006" price="100">
+      <Color> true</Color>
+      <Type> ink_jet</Type>
+     </Printer>
+    
+     <Printer model="3007" price="200">
+      <Color> true</Color>
+      <Type> laser</Type>
+     </Printer>
+  </Marker>
+
+</Products>

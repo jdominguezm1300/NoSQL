@@ -1,0 +1,19 @@
+<!ELEMENT Cines(Actor+ , Director+ , Pelicula+)>
+<!ELEMENT Actor (Nombre)>
+    <!ATTLIST Actor fechaNacimiento CDATA #REQUIRED
+                    idActor ID #REQUIRED
+                    idPelicula IDREFS #IMPLIED
+    >
+<!ELEMENT Director (Nombre)>
+    <!ATTLIST Director fechaNacimiento CDATA #REQUIRED
+                        idDirector ID #REQUIRED
+                        idPelicula IDREFS #IMPLIED
+    >
+<!ELEMENT Nombre (#CDATA)>
+<!ELEMENT Pelicula (Titulo, Genero*)>
+    <!ATTLIST Pelicula idPelicula ID #REQUIRED
+                       estreno CDATA #REQUIRED
+                       duracion CDATA #IMPLIED
+    >
+<!ELEMENT Titulo (#PCDATA)>
+<!ELEMENT Genero (#PCDATA)>

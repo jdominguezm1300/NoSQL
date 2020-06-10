@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Twitter">
+    	<xs:complexType>
+        	<xs:sequence>
+            	<xs:element name="Usuarios">
+                	<xs:complexType>
+                    	<xs:sequence>
+                        	<xs:element name="Usuario" minOccurs="0" maxOccurs="unbounded">
+                            	<xs:complexType>
+                                	<xs:sequence>
+                                    	<xs:element name="nombrePantalla" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                    	<xs:element name="localidad" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                    	<xs:element name="url" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                    	<xs:element name="fechaCreacion" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                    	<xs:element name="email" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                	</xs:sequence>
+                                	<xs:attribute name="usuarioNombre" type="xs:ID" use="required"/>
+                            	</xs:complexType>
+                        	</xs:element>
+                    	</xs:sequence>
+                	</xs:complexType>
+            	</xs:element>
+ 
+            	<xs:element name="Tweets">
+                	<xs:complexType>
+                    	<xs:sequence>
+                        	<xs:element name="Tweet" minOccurs="0" maxOccurs="unbounded">
+                            	<xs:complexType>
+                                	<xs:sequence>
+                                    	<xs:element name="text" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                    	<xs:element name="fechaCreacion" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                	</xs:sequence>
+                                	<xs:attribute name="tweetId" type="xs:ID" use="required"/>
+                            	</xs:complexType>
+                        	</xs:element>
+                    	</xs:sequence>
+                	</xs:complexType>
+            	</xs:element>
+ 
+            	<xs:element name="UsuariosTwitters">
+                	<xs:complexType>
+                    	<xs:sequence>
+                        	<xs:element name="UsuarioTwitter" minOccurs="0" maxOccurs="unbounded">
+                            	<xs:complexType>
+                                	<xs:attribute name="usuario" type="xs:IDREF" use="required"/>
+                                	<xs:attribute name="usuarioFollow" type="xs:IDREF" use="required"/>                              	 
+                            	</xs:complexType>
+                        	</xs:element>
+                    	</xs:sequence>
+                	</xs:complexType>
+            	</xs:element>
+ 
+            	<xs:element name="Tweetears">
+                	<xs:complexType>
+                    	<xs:sequence>
+                        	<xs:element name="Tweetear" minOccurs="0" maxOccurs="unbounded">
+                            	<xs:complexType>
+                                	<xs:attribute name="tweetId" type="xs:IDREF" use="required"/>
+                                	<xs:attribute name="usuario" type="xs:IDREF" use="required"/>                              	 
+                            	</xs:complexType>
+                        	</xs:element>
+                    	</xs:sequence>
+                	</xs:complexType>
+            	</xs:element>
+ 
+            	<xs:element name="Retweets">
+                	<xs:complexType>
+                    	<xs:sequence>
+                        	<xs:element name="Reweet" minOccurs="0" maxOccurs="unbounded">
+                            	<xs:complexType>
+                                	<xs:attribute name="tweetId" type="xs:IDREF" use="required"/>
+                                	<xs:attribute name="usuario" type="xs:IDREF" use="required"/>                              	 
+                            	</xs:complexType>
+                        	</xs:element>
+                    	</xs:sequence>
+                	</xs:complexType>
+            	</xs:element>
+ 
+            	<xs:element name="Replies">
+                	<xs:complexType>
+                    	<xs:sequence>
+                        	<xs:element name="Reply" minOccurs="0" maxOccurs="unbounded">
+                            	<xs:complexType>
+                                	<xs:attribute name="tweetId" type="xs:IDREF" use="required"/>
+                                	<xs:attribute name="usuario" type="xs:IDREF" use="required"/>                              	 
+                            	</xs:complexType>
+                        	</xs:element>
+                    	</xs:sequence>
+                	</xs:complexType>
+            	</xs:element>           	 
+        	</xs:sequence>
+    	</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:complexType name="markerType">
+    <xs:attribute name="name" type="xs:string"> </xs:attribute>
+    
+
+</xs:complexType>
+
+<xs:complexType name="productType" >
+    <xs:attribute name="model" type="xs:string"> </xs:attribute>
+    <xs:attribute name="price" type="xs:string"> </xs:attribute>
+</xs:complexType>
+
+
+<xs:complexType name="pcType"  >
+    <xs:sequence>
+      <xs:element name="Speed" type="xs:string"/>
+      <xs:element name="RAM" type="xs:string"/>
+      <xs:element name="HardDisk" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lapType" >
+    <xs:sequence>
+      <xs:element name="Speed" type="xs:string"/>
+      <xs:element name="RAM" type="xs:string"/>
+      <xs:element name="HardDisk" type="xs:string"/>
+      <xs:element name="Screen" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="prinType" >
+    <xs:sequence>
+      <xs:element name="Color" type="xs:boolean"/>
+      <xs:element name="Type" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+
+  
+<xs:element name="Products">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="Marker" type="markerType"/>
+
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:element>
+
+</xs:schema>

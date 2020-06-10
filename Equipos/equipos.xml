@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Datos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Equipos.xsd">
+    <Equipos>
+        <Equipo idE="Am" nombre="America" capitan="Jo">
+            <Colores>Amarillo y azul</Colores>
+            <Jugador idJ="Ar" edad="22" posicion="Delantero">Arturo</Jugador>
+            <Jugador idJ="Jo" edad="21" posicion="Defensa">Jonathan</Jugador>
+        </Equipo>
+        <Equipo idE="Ch" nombre="Chivas">
+            <Colores>Blanco y rojo</Colores>
+            <Jugador idJ="Joa" edad="21" posicion="Portero">Joaquin</Jugador>
+            <Jugador idJ="Arv" edad="22" posicion="Centro">Arvid</Jugador>
+            <Jugador idJ="Yi" edad="22">Yair</Jugador>
+        </Equipo>
+    </Equipos>
+    <Aficionados>

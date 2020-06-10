@@ -1,0 +1,23 @@
+<!ELEMENT Products (Marker*)>
+<!ELEMENT Marker (PC*,Laptop*,Printer*)>
+<!ATTLIST Marker name CDATA #REQUIRED>
+<!ELEMENT PC (Speed,RAM,HardDisk)>
+<!ATTLIST PC
+  model CDATA #REQUIRED
+  price CDATA #REQUIRED> 
+<!ELEMENT Laptop (Speed,RAM,HardDisk,Screen)>
+<!ATTLIST Laptop
+  model CDATA #REQUIRED
+  price CDATA #REQUIRED>
+<!ELEMENT Printer (Color,Type)>
+<!ATTLIST Printer
+  model CDATA #REQUIRED
+  price CDATA #REQUIRED>
+<!ELEMENT Speed (#PCDATA)>
+<!ELEMENT RAM (#PCDATA)>
+<!ELEMENT HardDisk (#PCDATA)>
+<!ELEMENT Screen (#PCDATA)>
+<!ELEMENT Color (#PCDATA)>
+<!ELEMENT Type (#PCDATA)>
+
+

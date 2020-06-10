@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="Relation">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="A"/>
+            <xs:enumeration value="N"/>
+            <xs:enumeration value="S"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="Genealogia">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Persona" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Nombre" type="xs:string"/>
+                            <xs:element name="FechaNacimiento" type="xs:date"/>
+                            <xs:element name="LugarNacimiento" type="xs:string"/>
+                            <xs:element name="FechaDefuncion" type="xs:date" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="LugarDefuncion" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="Padre" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <!--
+                                        Los esquema permiten tener tipos de datos ID Y IDREF 
+                                        debido a tener compatibilidad con los DTDs.
+                                        Lo usamos para mayor facilidad en la creación del esquema 
+                                    -->
+                                    <xs:attribute name="Curp" type="xs:IDREF" use="required"/>
+                                    <xs:attribute name="Type" type="Relation"/>
+                                </xs:complexType>
+                                </xs:element>
+                            <xs:element name="Madre" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="Curp" type="xs:IDREF" use="required"/>
+                                    <xs:attribute name="Type" type="Relation"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="hijos" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <!--
+                                        En un esquema con Keyref no permite tener una list de referencias 
+                                        por lo que usamos el tipo de dato IDREFS de los esquemas.
+                                        Y así tener mayor similitud con nuestro DTD
+                                    -->
+                                    <xs:attribute name="listHijos" type="xs:IDREFS"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+ 
+                        <xs:attribute name="Curp" type="xs:ID" use="required"/>
+                        <xs:attribute name="Sexo" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

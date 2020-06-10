@@ -1,0 +1,37 @@
+<!ELEMENT Datos (Equipos, Aficionados)>
+<!--
+Como puede haber varios equipos se agruparon en una etiqueta general
+para mantener un mejor orden y separarlos de los aficionados
+-->
+<!ELEMENT Equipos (Equipo*)>
+<!--
+Cada equipo tiene como atributos su ID, capitán y su nombre, debe de tener
+un elemento Colores obligatoriamente, debe de tener mínimo un jugador
+registrado
+-->
+<!ELEMENT Equipo (Colores, Jugador+)>
+    <!ATTLIST Equipo 
+    idE ID #REQUIRED
+    nombre CDATA #REQUIRED
+    capitan CDATA #IMPLIED>
+<!ELEMENT Colores (#PCDATA)>
+<!--
+Cada Jugador tiene su ID, edad y posición como atributos, su nombre va entre
+las etiquetas de Jugador
+-->
+<!ELEMENT Jugador (#PCDATA)>
+    <!ATTLIST Jugador 
+    idJ ID #REQUIRED
+    edad CDATA #REQUIRED
+    posicion CDATA #IMPLIED>
+<!ELEMENT Aficionados (Aficionado*)>
+<!--
+Cada Aficionado tiene edad, equipos favoritos y jugadores favoritos
+como atributos, siendo, los dos últimos una lista de referencias
+el nombre del Aficionado va entre las etiquetas
+-->
+<!ELEMENT Aficionado (#PCDATA)>
+    <!ATTLIST Aficionado 
+    edad CDATA #REQUIRED
+    equiposFav IDREFS #IMPLIED
+    jugadoresFav IDREFS #IMPLIED>

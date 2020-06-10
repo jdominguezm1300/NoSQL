@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE Twitter SYSTEM "Twitter.dtd">
+<Twitter>
+    <Usuarios>
+        <Usuario usuarioNombre="Joaks">
+            <nombrePantalla> Joaquín Dominguez</nombrePantalla>
+            <localidad> Iztapalapa</localidad>
+            <url>www.jw.org</url>
+            <fechaCreacion> 12-01-12</fechaCreacion>
+            <email> joaks.jdm@gmail.com</email>
+        </Usuario>  
+        <Usuario usuarioNombre="Jon">
+                <nombrePantalla> Yair Carrillo</nombrePantalla>
+                <localidad> Iztapalapa</localidad>
+                <url>www.jw.org</url>
+                <fechaCreacion> 12-02-12</fechaCreacion>
+                <email> yair.jdm@gmail.com</email>
+        </Usuario>
+        <Usuario usuarioNombre="Yair">
+                <nombrePantalla> Yair Carrillo</nombrePantalla>
+                <localidad> Iztapalapa</localidad>
+                <url>www.jw.org</url>
+                <fechaCreacion> 12-02-12</fechaCreacion>
+                <email> yair.jdm@gmail.com</email>
+        </Usuario>
+
+    </Usuarios>
+    <UsuarioTwitters>
+        <UsuarioTwitter usuario="Joaks" usuarioFollow="Yair"/>
+        <UsuarioTwitter usuario="Joaks" usuarioFollow="Jon"/>
+        <UsuarioTwitter usuario="Jon" usuarioFollow="Joaks"/>
+    </UsuarioTwitters>
+
+    <Tweets>
+        <Tweet tweetId="1">
+            <text> Hola amigos</text>
+            <fechaCreacion> 12-01-12 1:00:00</fechaCreacion>
+        </Tweet>
+
+        <Tweet tweetId="2">
+                <text> Hola amigos</text>
+                <fechaCreacion> 12-01-12 1:00:00</fechaCreacion>
+            </Tweet>
+
+    </Tweets>
+
+    <Tweetears>
+        <Tweetear tweetId="1" usuario="Joaks"/>
+        <Tweetear tweetId="2" usuario="Jon"/>
+
+    </Tweetears>
+    <Retweets>
+            <Retweet tweetId="1" usuario="Jon"/>
+    </Retweets>
+    <Replies>
+            <Reply tweetId="2" usuario="Joaks"/>
+    </Replies>
+</Twitter>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Datos"
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Equipos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Equipo" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Colores" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                        <xs:element name="Jugador" minOccurs="1" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="idJ" type="xs:ID" use="required"/>
+                                                        <xs:attribute name="edad" type="xs:integer" use="required"/>
+                                                        <xs:attribute name="posicion" type="xs:string" use="optional"></xs:attribute>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="idE" type="xs:ID" use="required"/>
+                                    <xs:attribute name="nombre" type="xs:string" use="required"/>
+                                    <xs:attribute name="capitan" type="xs:string" use="optional"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Aficionados">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Aficionado" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="edad" type="xs:integer" use="required"/>
+                                            <xs:attribute name="equiposFav" type="xs:IDREFS" use="optional"/>
+                                            <xs:attribute name="jugadoresFav" type="xs:IDREFS" use="optional"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+<!--
+Los esquemas permiten tener tipos de datos ID Y IDREF 
+debido a tener compatibilidad con los DTDs.
+Lo usamos para mayor facilidad en la creación del esquema.
+En un esquema con Keyref no permite tener una lista de referencias 
+por lo que usamos el tipo de dato IDREFS de los esquemas.
+Y así tener mayor similitud con nuestro DTD.
+-->

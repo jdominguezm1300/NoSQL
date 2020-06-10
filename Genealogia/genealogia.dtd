@@ -1,0 +1,54 @@
+<!ELEMENT Genealogia (Persona*)>
+<!ELEMENT Persona (Nombre,FechaNacimiento,LugarNacimimento,FechaDefuncion?,LugarDefuncion?,Padre*,Madre*,hijos?)>
+<!ATTLIST Persona 
+    Curp ID #REQUIRED
+    Sexo CDATA #REQUIRED
+>
+<!--
+    Una persona puede tener más de un papá 
+    debido a que se puede tener un padrastro y su papá genérico,
+    al igual que con las madres.
+    En caso de que esté muerta una persona se agrega la etiqueta 
+    FechaDefunción y LugarDefunción
+-->
+<!--
+    En el caso de que una persona sea huérfan@ 
+    se significa que su padre y su madre
+    son desconocidos o están muertos, por lo que las etiquetas
+    padre y madre no aparecerán solo si no se conocen 
+    a sus padres	
+-->
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT FechaNacimiento (#PCDATA)>
+<!ELEMENT lugarNacimiento (#PCDATA)>
+<!ELEMENT FechaDefuncion (#PCDATA)>
+<!ELEMENT LugarDefuncion (#PCDATA)>
+<!ELEMENT Padre EMPTY>
+<!ATTLIST Padre 
+Curp IDREF #REQUIRED
+Type (A|N|S) #REQUIRED
+>
+<!--A para saber si es su padre adoptivo 
+    N para saber si su padre generico
+    S para saber si es padrastro
+-->
+<!ELEMENT Madre EMPTY>
+<!ATTLIST Madre 
+    Curp IDREF #REQUIRED
+    Type (A|N|S) #REQUIRED
+>
+<!--A para saber si es su madre adoptivo 
+    N para saber si su madre genérico
+    S para saber si es madrastra
+-->
+<!ELEMENT Hijos EMPTY>
+<!ATTLIST Hijos 
+listHijos IDREFS #REQUIRED>
+ 
+<!--    
+    En el caso de que la persona tenga hijos
+    aparecerá esta etiqueta con una lista
+    de referencias a elementos persona 
+    indicando que ellos son sus hijos
+-->
+

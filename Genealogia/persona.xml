@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Genealogia>
+    <Persona Curp="JIMA970312HMCMXR00" Sexo="Masculino">
+        <Nombre>Arvid Jimenez Muñoz</Nombre>
+        <FechaNacimiento>1997-02-15</FechaNacimiento>
+        <LugarNacimiento>Iztapalapa</LugarNacimiento>
+        <hijos listHijos="MEMJ980322HDFLCN09" />
+ 
+    </Persona>
+    <Persona Curp="MEMJ980322HDFLCN09" Sexo="Masculino">
+        <Nombre>Jonathan Melendez Macedonio</Nombre>
+        <FechaNacimiento>1998-06-12</FechaNacimiento>
+        <LugarNacimiento>Iztapalapa</LugarNacimiento>
+        <Padre Curp="JIMA970312HMCMXR00" Type="N" />
+        <hijos listHijos="CABE971013HDFRLD02" />
+ 
+    </Persona>
+ 
+    <Persona Curp="CABE971013HDFRLD02" Sexo="Masculino">
+        <Nombre>Yair Eduardo Carrillo Balcazar</Nombre>
+        <FechaNacimiento>1997-10-13</FechaNacimiento>
+        <LugarNacimiento>CDMX</LugarNacimiento>
+        <Padre Curp="MEMJ980322HDFLCN09" Type="A" />
+    </Persona>
+</Genealogia>

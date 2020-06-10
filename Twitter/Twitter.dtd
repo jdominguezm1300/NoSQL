@@ -1,0 +1,37 @@
+<!ELEMENT Twitter (Usuarios*,UsuarioTwitters,Tweets,Tweetears,Retweets,Replies)>
+<!ELEMENT Usuarios (Usuario*)>
+<!ELEMENT Tweets (Tweet*)>
+<!ELEMENT Tweetears (Tweetear*)>
+<!ELEMENT Retweets (Retweet*)>
+<!ELEMENT Replies (Reply*)>
+<!ELEMENT UsuarioTwitters (UsuarioTwitter*)>
+<!ELEMENT Usuario (nombrePantalla,localidad,url,fechaCreacion,email)>
+<!ATTLIST Usuario usuarioNombre ID #REQUIRED>
+<!ELEMENT UsuarioTwitter EMPTY>
+<!ATTLIST  UsuarioTwitter 
+    usuario IDREF #REQUIRED
+    usuarioFollow   IDREF  #REQUIRED>
+
+<!ELEMENT Tweet (text,fechaCreacion)>
+<!ATTLIST Tweet 
+          tweetId ID #REQUIRED>
+<!ELEMENT Retweet EMPTY>
+<!ATTLIST  Retweet
+    tweetId IDREF #REQUIRED
+    usuarioFollow   IDREF #REQUIRED >
+<!ELEMENT Reply EMPTY>
+<!ATTLIST  Reply
+    tweetId IDREF #REQUIRED
+    usuarioFollow   IDREF  #REQUIRED >
+
+<!ELEMENT Tweetear EMPTY>
+<!ATTLIST   Tweetear
+    tweetId IDREF #REQUIRED
+    usuario  IDREF #REQUIRED >
+
+<!ELEMENT nombrePantalla (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT fechaCreacion (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT text (#PCDATA)>

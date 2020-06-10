@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<Cine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cine.xsd">  
+    <Actores>  
+        <Actor fechaNacimiento="25/09/1968" idActor="WS1" idPelicula="P1" >  
+            <NombreA>Will Smith</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="28/11/1984" idActor="MW1" idPelicula="P1" >  
+            <NombreA>Mary Elizabeth Winstead</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="03/10/1964" idActor="CO1" idPelicula="P1" >  
+            <NombreA>Clive Owen</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="06/02/1986" idActor="DD1" idPelicula="P2">  
+            <NombreA>Dane Dehaan06<02/1986NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="22/04/1996" idActor="ME1" idPelicula="P3">  
+            <NombreA>Mala Emde</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="07/05/1989" idActor="AS1" idPelicula="P3">  
+            <NombreA>Anton Spieker</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="06/11/1962" idActor="AS2" idPelicula="P3">  
+            <NombreA>Arndt Schwering-Sohnrey</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="08/01/1980" idActor="SR1" idPelicula="P4">  
+            <NombreA>Sam Riley</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="10/07/1977" idActor="CE1" idPelicula="P4">  
+            <NombreA>Chiwetel Ejiofor</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="09/01/1956" idActor="IS1" idPelicula="P4">  
+            <NombreA>Imelda Staunton</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="28/10/1974" idActor="JP1" idPelicula="P5">  
+            <NombreA>Joaquin Phoenix</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="17/08/1943" idActor="RD1" idPelicula="P5">  
+            <NombreA>Robert De Niro</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="25/05/1991" idActor="KB1" idPelicula="P5">  
+            <NombreA>Zazie Beetz</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="12/05/1981" idActor="RM1" idPelicula="P6">  
+            <NombreA>Rami Malek</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="17/01/1994" idActor="LB1" idPelicula="P6">  
+            <NombreA>Lucy Boynton</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="24/11/1983" idActor="GL1" idPelicula="P6">  
+            <NombreA>Gwilym Lee</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="02/01/1991" idActor="BH1" idPelicula="P6">  
+            <NombreA>Ben Hardy</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="25/08/1967" idActor="TH1" idPelicula="P6">  
+            <NombreA>Tom Hollander</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="03/04/1924" idActor="MB2" idPelicula="P7">  
+            <NombreA>Marlon Brando</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="25/04/1940" idActor="AP3" idPelicula="P7">  
+            <NombreA>Al Pacino</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="18/02/1954" idActor="JT1" idPelicula="P8">  
+            <NombreA>John Travolta</NombreA>  
+        </Actor>  
+        <Actor fechaNacimiento="21/12/1948" idActor="SJ2" idPelicula="P8">  
+            <NombreA>Samuel L. Jackson</NombreA>  
+        </Actor>  
+    </Actores>  
+    <Directores>  
+        <Director fechaNacimiento="23/10/1954" idDirector="AL1" idPelicula="P1">  
+            <NombreD>Ang Lee</NombreD>  
+        </Director>  
+        <Director fechaNacimiento="30/11/1973" idDirector="NA1" idPelicula="P2">  
+            <NombreD>Nimród Antal</NombreD>  
+        </Director>  
+        <Director fechaNacimiento="02/11/1970" idDirector="HW2" idPelicula="P3">  
+            <NombreD>Hans Weingartner</NombreD>  
+        </Director>  
+        <Director fechaNacimiento="30/05/1972" idDirector="JR3" idPelicula="P4">  
+            <NombreD>Joachim Rønning</NombreD>  
+        </Director>  
+        <Director fechaNacimiento="20/12/1970" idDirector="TP1" idPelicula="P5">  
+            <NombreD>Todd Phillips</NombreD>  
+        </Director>  
+        <Director fechaNacimiento="17/09/1975" idDirector="BS1" idPelicula="P6">  
+            <NombreD>Bryan Singer</NombreD>  
+        </Director>  
+        <Director fechaNacimiento="07/09/1939" idDirector="FF1" idPelicula="P7">  
+            <NombreD>Francis Ford Coppola</NombreD>  
+        </Director>  
+        <Director fechaNacimiento="27/03/1963" idDirector="QT1" idPelicula="P8">  
+            <NombreD>Quentin Tarantino</NombreD>  
+        </Director>  
+    </Directores>  
+    <Peliculas>  
+        <Pelicula idPelicula="P1" estreno="11/10/2019">  
+            <Titulo>Géminis</Titulo>  
+            <Genero>Ciencia ficción</Genero>  
+            <Genero>Drama</Genero>  
+            <Genero>Acción</Genero>  
+            <Genero>Aventuras</Genero>  
+        </Pelicula>  
+        <Pelicula idPelicula="P2" estreno="2018" >  
+            <Titulo>Metallica Through the Never</Titulo>  
+            <Genero>Documental</Genero>  
+            <Genero>Musical</Genero>  
+        </Pelicula>  
+        <Pelicula idPelicula="P3" estreno="26/07/2019" >  
+            <Titulo>303</Titulo>  
+            <Genero>Comedia</Genero>  
+            <Genero>Drama</Genero>  
+            <Genero>Romántica</Genero>  
+        </Pelicula>  
+        <Pelicula idPelicula="P4" estreno="18/10/2019" >  
+            <Titulo>Maléfica: Maestra del Mal</Titulo>  
+            <Genero>Infantil / Familiar</Genero>  
+            <Genero>Fantástico</Genero>  
+            <Genero>Acción</Genero>  
+            <Genero>Aventuras</Genero>  
+        </Pelicula>  
+        <Pelicula idPelicula="P5" estreno="04/10/2019" >  
+            <Titulo>Joker</Titulo>  
+            <Genero>Drama</Genero>  
+            <Genero>Acción y Aventuras</Genero>  
+            <Genero>Suspense / Thriller</Genero>  
+        </Pelicula>  
+        <Pelicula idPelicula="P6" estreno="2018" >  
+            <Titulo>Bohemian Rhapsody: La Historia de Freddie Mercury</Titulo>  
+            <Genero>Biográfica</Genero>  
+        </Pelicula>  
+        <Pelicula idPelicula="P7" estreno="29/06/2018" duracion="2h55min">  
+            <Titulo>El padrino</Titulo>  
+            <Genero>Crimen</Genero>  
+            <Genero>Drama</Genero>  
+        </Pelicula>  
+        <Pelicula idPelicula="P8" estreno="07/07/2017" duracion="2h29min">  
+            <Titulo>Pulp Fiction</Titulo>  
+            <Genero>Crimen</Genero>  
+            <Genero>Suspense</Genero>  
+        </Pelicula>  
+    </Peliculas>  
+</Cine>
